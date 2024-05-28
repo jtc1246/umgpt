@@ -1,4 +1,4 @@
-from openai import AzureOpenAI
+from openai import AzureOpenAI  # pip install openai
 import json
 
 
@@ -8,11 +8,12 @@ client = AzureOpenAI(
     azure_endpoint='https://api.umgpt.umich.edu/azure-openai-api-unlimited',
     organization='001145'
 )
+# api_version azure_endpoint organization 这三个都不要改
 
 response = client.chat.completions.create(
     model='gpt-35-turbo',
     # model='gpt-4',
-    # 这里需要注意，model 只能是 'gpt-35-turbo' 或 'gpt-4'，别的 (比如gpt-4-torbo gpt-3.5-torbo) 都不行
+    # 这里需要注意，model 只能是 'gpt-35-turbo' 或 'gpt-4'，别的 (比如gpt-4-turbo gpt-3.5-turbo) 都不行
     temperature=0.6,  # temperature 是可选的
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
