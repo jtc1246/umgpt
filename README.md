@@ -1,4 +1,4 @@
-# UMGPT
+# UMGPT 使用说明
 
 1. 例子可以参考 [example.py](example.py)，需要把 api_key 改成你的 api key，然后就可以运行了。
 2. `{"role": "user", "content": 'what is 2*3'},` 把这里的 "what is 2*3" 替换成你的问题。
